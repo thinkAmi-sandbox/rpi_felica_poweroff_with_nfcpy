@@ -1,0 +1,11 @@
+[Unit]
+Description=Pasori RC-S380 service
+Requires=dev-bus-usb-001-004.device
+After=dev-bus-usb-001-004.device
+
+[Service]
+Type=simple
+User=pi
+Restart=on-failure
+RestartSec=5
+ExecStart=/usr/bin/python /home/pi/projects/rpi_felica_poweroff_with_nfcpy/main.py

@@ -1,0 +1,1 @@
+SUBSYSTEM=="usb", ACTION=="add", ATTRS{idProduct}=="06c3", ATTRS{idVendor}=="054c", GROUP="plugdev", TAG+="systemd", ENV{SYSTEMD_WANTS}+="rc-s380.service", NAME="pasori380"
